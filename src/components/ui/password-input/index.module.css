@@ -7,7 +7,7 @@
     flex-direction: column;
     border-radius: 10em;
     border:1px solid black;
-    padding: 1em;
+    padding: 15px;
     position: flex;
     flex-direction: row;
     align-items: center;
@@ -15,12 +15,13 @@
 }
 
 .passwordInput{
-    padding: 1em;
+    padding: 8px;
     width: 100%;
     height: 100%;
     border: none;
     outline: none;
     height: auto;
+    font-size: medium;
 }
 
 .passwordIcon{

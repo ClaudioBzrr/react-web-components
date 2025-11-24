@@ -1,5 +1,5 @@
 import { InputHTMLAttributes, useState } from "react";
-import { LuEye } from 'react-icons/lu'
+import { LuEye, LuEyeClosed } from 'react-icons/lu'
 import style from './index.module.css'
 
 export function PasswordInput({...props}:InputHTMLAttributes<HTMLInputElement>){
@@ -7,7 +7,11 @@ export function PasswordInput({...props}:InputHTMLAttributes<HTMLInputElement>){
     return (
         <div className={style.passwordDiv}>
             <input className={style.passwordInput}  {...props} type={showPassword ? 'text' : 'password'} />
-            <LuEye onClick={() => setShowPassword(!showPassword)} className={style.passwordIcon}/>
+            {
+                showPassword ?
+                <LuEye className={style.passwordIcon} onClick={() => setShowPassword(false)}/> :
+                <LuEyeClosed className={style.passwordIcon} onClick={() => setShowPassword(true)}/>
+            }
         </div>
     )
 
