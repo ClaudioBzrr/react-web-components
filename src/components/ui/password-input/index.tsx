@@ -1,11 +1,12 @@
 import { InputHTMLAttributes, useState } from "react";
-import { LuEye, LuEyeClosed } from 'react-icons/lu'
+import { LuEye, LuEyeClosed, LuLock } from 'react-icons/lu'
 import style from './index.module.css'
 
-export function PasswordInput({...props}:InputHTMLAttributes<HTMLInputElement>){
+export default function ({...props}:InputHTMLAttributes<HTMLInputElement>){
     const [showPassword, setShowPassword] = useState<boolean>(false);
     return (
         <div className={style.passwordDiv}>
+            <LuLock className={style.passwordIcon}/>
             <input className={style.passwordInput}  {...props} type={showPassword ? 'text' : 'password'} />
             {
                 showPassword ?
