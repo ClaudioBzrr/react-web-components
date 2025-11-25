@@ -1,10 +1,10 @@
 {
-  "name": "vite-project",
+  "name": "react-darkside-ui-minimalist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "parcel serve index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "dependencies": {
