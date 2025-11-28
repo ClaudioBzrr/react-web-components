@@ -8,8 +8,8 @@ interface IButtonProps extends  ButtonHTMLAttributes<HTMLButtonElement> {
 }
 export default function Button({isLoading,...props}:IButtonProps){
     return (
-        <button className={isLoading ? style.buttonLoading : style.button} {...props}>
-            { isLoading ? <><LuLoaderCircle size={20} className={style.buttonSpinner}/> Carregando...</> : props.children}
+        <button disabled={isLoading} className={isLoading ? style.buttonLoading : style.button} {...props}>
+            { isLoading ? <><LuLoaderCircle size={15} className={style.buttonSpinner}/> Carregando...</> : props.children}
         </button>
     )
 }
