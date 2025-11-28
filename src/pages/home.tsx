@@ -1,3 +1,10 @@
+import Button from "../components/ui/button";
+
 export function Home(){
-    return <h1>home</h1>
+    return (
+        <>
+            <Button>Button</Button>
+            <Button isLoading>Button</Button>
+        </>
+    )
 }

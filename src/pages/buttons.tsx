@@ -1,3 +1,7 @@
+import Button from "../components/ui/button";
+
 export function Buttons(){
-    return <></>
+    return (
+        <Button>Button</Button>
+    )
 }

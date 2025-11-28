@@ -1,10 +1,15 @@
 import type { ButtonHTMLAttributes } from "react";
+import { LuLoaderCircle } from "react-icons/lu";
 import style from './index.module.css'
 
-export default function Button({...props}:ButtonHTMLAttributes<HTMLButtonElement>){
+
+interface IButtonProps extends  ButtonHTMLAttributes<HTMLButtonElement> {
+    isLoading?: boolean
+}
+export default function Button({isLoading,...props}:IButtonProps){
     return (
-        <button className={style.button} {...props}>
-            {props.children}
+        <button className={isLoading ? style.buttonLoading : style.button} {...props}>
+            { isLoading ? <><LuLoaderCircle size={20} className={style.buttonSpinner}/> Carregando...</> : props.children}
         </button>
     )
 }
